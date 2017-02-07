@@ -25,6 +25,7 @@ import java.util.Vector;
 
 import javax.servlet.http.HttpSession;
 
+import com.bright.framework.password.PasswordHasher;
 import org.apache.avalon.excalibur.datasource.DataSourceComponent;
 
 import com.bn2web.common.exception.Bn2Exception;
@@ -48,7 +49,7 @@ public class UserManager extends Bn2Manager implements UserConstants
 	protected DataSourceComponent m_dataSource = null;
 	protected Vector m_vecAvailableLoginCodes = new Vector();
 	protected Vector m_vecWaitingLoginCodes = new Vector();
-	
+	protected PasswordHasher passwordHasher = new PasswordHasher();
 	
 	/**
 	 * Prepare a list of available login codes for signon without login...
@@ -583,15 +584,7 @@ public class UserManager extends Bn2Manager implements UserConstants
 			return (a_sPassword);
 		}
 
-		// "Encrypt" the data using the password:
-		char [] ct = a_sPassword.toCharArray ();
-
-		for(int i = 0; i < ct.length; i++)
-		{
-			ct[i] += k_sEncryptionPassword.charAt (i % k_sEncryptionPassword.length ());
-		}
-
-		return new String (ct);
+		return passwordHasher.saltAndHash(a_sPassword);
 
 	}
 
@@ -626,13 +619,7 @@ public class UserManager extends Bn2Manager implements UserConstants
 			return (false);
 		}
 
-		// No nulls, so check:
-		if (a_sEncryptedPassword.equals (encrypt (a_sUnEncryptedPassword)))
-		{
-			return (true);
-		}
-
-		return (false);
+		return passwordHasher.checkPassword(a_sEncryptedPassword, a_sUnEncryptedPassword);
 	}
 
 	public void setDataSourceComponent (DataSourceComponent a_datasource)
