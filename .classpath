@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/activation.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/avalon-fortress-container-complete-1.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/bn2web_common.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-collections.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-digester.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-lang.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-resources.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-services.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/excalibur-component-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/excalibur-datasource-1.2.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/excalibur-pool-1.2.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/excalibur-pool-instrumented-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/logkit.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/mysql-connector-java-3.0.9-stable-bin.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/struts.jar"/>
+	<classpathentry kind="src" path="WEB-INF/src"/>
+	<classpathentry kind="src" output="work" path="work"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jsp-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/gson-1.7.1.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/commons-io-2.1.jar"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>

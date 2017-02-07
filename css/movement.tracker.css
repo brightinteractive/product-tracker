@@ -1,0 +1,800 @@
+/* ===================================================================
+   	style.css
+   
+   	Created by James Da Costa on 2012-02-14.
+   	Copyright 2011 Bright Interactive. All rights reserved.
+   =================================================================== */
+
+/* ===================================================================
+	Resets
+	Reset browser defaults and fix a number of common issues.
+----------------------------------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* tables still need cellspacing="0" in the markup */
+th {
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.ie6 legend, .ie7 legend {
+	margin-left: -7px;
+}
+
+pre {
+	/* CSS2 */
+	/* CSS 2.1 */
+	white-space: pre-line;
+	/* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word;
+	/* IE */
+}
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+
+pre, code, kbd, samp {
+	font-family: monospace, sans-serif;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+	-ms-interpolation-mode: bicubic;
+}
+
+/* ===================================================================
+	Typography
+----------------------------------------------------------------------*/
+
+body {
+	font-family: sans-serif;
+}
+
+/* Link styles */
+a, a:link {
+	text-decoration: none;
+	color: #295072;
+}
+
+/* a:visited { color: #000; } */
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: #000;
+}
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+	outline: none;
+}
+
+/* Some sensible heading styles  */
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 14px;
+}
+
+h5 {
+	font-size: 13px;
+}
+
+h6 {
+	font-size: 13px;
+}
+
+h1 img, h2 img, h3 img,
+h4 img, h5 img, h6 img {
+	margin: 0;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+blockquote {
+	margin: 1.5em;
+	color: #666;
+	font-style: italic;
+}
+
+strong,dfn {
+	font-weight: bold;
+}
+
+em,dfn {
+	font-style: italic;
+}
+
+sup, sub {
+	line-height: 0;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+}
+
+address {
+	margin: 0 0 1.5em;
+	font-style: italic;
+}
+
+del {
+	color: #666;
+}
+
+/* ===================================================================
+ 	Page Structure
+	Styles for the layout of page furniture
+	E.g. div#header, div#footer, div#leftPanel etc...
+----------------------------------------------------------------------*/
+
+div#header {
+}
+
+div#navigation {
+}
+
+div#wrap {
+}
+
+div#footer {
+}
+
+/* ===================================================================
+ 	Forms
+	Styles for the layout of forms
+----------------------------------------------------------------------*/
+
+/* First fix some common cross browser issues. */
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+	vertical-align: baseline;
+}
+
+.ie6 input {
+	vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+	cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+	margin: 0;
+}
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+
+button {
+	width: auto;
+	overflow: visible;
+}
+
+/* Remove textarea scrollbar in IE */
+textarea {
+	overflow: auto;
+}
+
+input, select {
+	vertical-align: middle;
+}
+
+/* ===================================================================
+ 	Navigation
+	Styles for any navigation elements 
+	E.g. main navigation, secondary navigation, header/footer links
+----------------------------------------------------------------------*/
+
+/* ===================================================================
+	Page components
+	styles for the components that make up each webpage. (Most of the
+	CSS will go in here)
+	E.g. div#header img.logo, div#leftPanel ul li a etc...
+----------------------------------------------------------------------*/
+
+/* ===================================================================
+	Helpers
+	styles that apply to elements, usually using a single
+	class name throughout the site. 
+	E.g. div.error, p.message, .clearfix etc...
+----------------------------------------------------------------------*/
+
+/* System Message Styles */
+.error {
+	background: #FFBABA;
+	border: 1px solid #E69494;
+	color: #D6010E;
+}
+
+.warning {
+	background: #FEEFB3;
+	border: 1px solid #DDA233;
+	color: #9F6000;
+}
+
+.success {
+	background: #DFF2BF;
+	border: 1px solid #4F8A10;
+	color: #59911C;
+}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+	content: "\0020";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+
+/* ===================================================================
+	Product Tracker
+----------------------------------------------------------------------*/
+
+.hide {
+	display: none;
+}
+
+body {
+	background:#676767 url(../images/movement-tracker/bg.png) top left repeat-x;
+}
+
+#pt_container {
+	position: relative;
+	width: 100%;
+	height: 500px;
+ 	font-size: 13px;
+	top: 20px;
+	overflow: hidden;
+}
+
+#pt_container_inner {
+	height: 100%;
+	position: relative;
+	margin: 0 20px;
+	background-color: #f3f3f3;
+	-webkit-box-shadow: #333 0px 2px 7px;
+	-moz-box-shadow: #333 0px 2px 7px;
+	box-shadow: #333 0px 2px 7px;
+	border: 1px solid #d9d9d9;
+}
+
+#header h1 {
+	padding: 7px 10px 0 10px;
+	margin: 0;
+	color: #FBC600;
+	font-family: "Trebuchet MS";
+	font-size: 18px;
+}
+
+#header_inner {
+	padding: 20px 0px 0px 0px;
+	overflow: hidden;
+}
+
+#header_inner #logo,
+#header_inner h1 {
+	float: left;
+}
+
+#pt_filter form {
+	display: inline;
+}
+
+#pt_filter {
+	font-size: 12px;
+	color: #fff;
+	float: right;
+}
+
+#pt_filter input {
+	vertical-align: baseline;
+}
+
+#pt_filter a {
+	color: #fff;
+	padding: 6px 10px;
+	font-size: 13px;
+}
+
+#DownloadBtn, #pt_filter a {
+	margin: 0 0 0 15px;
+}
+
+a#filter_btn:hover {
+	text-decoration: none;
+	color: #FBC600;
+}
+
+#pt_filter_options {
+	position: absolute;
+	top: 46px;
+	right: 140px;
+	width: 160px;
+	height: auto;
+	padding: 15px 20px;
+	background: #555;
+	color: #fff;
+	z-index: 200;
+	font-size: 12px;
+}
+
+#pt_filter_options label {
+	float: left;
+	width: 100%;
+	margin-bottom: 5px;
+	color: #fff;
+	line-height: 1.4;
+}
+
+#pt_filter_options form {
+	padding: 0px 0px;
+}
+
+#filterClose {
+	padding: 2px 6px;
+	color: #fff;
+}
+
+#pt_filter a.active {
+	background: #555;
+	color: #fff;
+}
+
+/* =tables */
+
+#product_movement_tbl_container,
+#product_details_tbl_container {
+	position: absolute;
+	top: 45px;
+	left: 0px;
+	background: #f9f9f9;	
+}
+
+table.pt_table th, table.pt_table td {
+	vertical-align: middle;
+	text-align: left;
+	padding: 0 12px;
+}
+
+#day_headers th, 
+#day_headers_fake th {
+	padding: 0px;
+}
+
+#week_headers th {
+	padding: 0 4px;
+}
+
+th span.dayCell {
+	display: block;
+	width: 20px;
+	text-align: center;
+}
+
+#product_movement_tbl thead th {
+	visibility: hidden;
+}
+
+table.pt_table thead, table.pt_table th {
+	line-height: 1.4;
+}
+
+table.pt_table thead th {
+	border-bottom: 1px solid #ddd;
+}
+
+#product_details_tbl thead th,
+#product_details_header_tbl thead th {
+	line-height: 43px;
+}
+
+#product_movement_tbl thead th ,
+#product_movement_header_tbl th{
+	line-height: 21px;
+}
+
+#product_movement_header_tbl tr#week_headers th {
+ 	border-bottom: 1px dashed #ddd;
+}
+
+#product_movement_header_tbl tr#week_headers th em {
+	color: #999;
+	font-weight: normal;
+	font-size: 9px;
+	float: right;
+	font-style: normal;
+}
+
+#product_movement_tbl tr#day_headers_fake th.last,
+#product_movement_header_tbl tr#day_headers th.last,
+#product_movement_header_tbl tr#week_headers th,
+#product_details_tbl th,
+#product_details_header_tbl th 
+{
+	/* border-right: 1px solid #c3c3c3; */
+}
+
+#product_details_tbl tbody th,
+#product_details_tbl tbody td,
+#product_movement_tbl tbody th,
+#product_movement_tbl tbody td,
+#product_movement_header_tbl tbody th,
+#product_movement_header_tbl tbody td {
+	padding: 2px 10px;
+}
+
+#product_movement_tbl tbody td {
+	padding: 2px 0px;
+}
+
+#product_details_tbl tbody td,
+#product_movement_tbl tbody td,
+product_movement_header_tbl tbody td {
+	border-bottom: 1px solid #d3d3d3;
+	height: 10px;
+	
+	word-wrap: break-word;
+}
+
+#product_details_tbl tbody th,
+#product_movement_tbl tbody th,
+#product_movement_header_tbl tbody th {
+	background: #FBC600;
+}
+
+#product_movement_header_tbl thead th.wkend {
+	background: #f1f1f1;
+}
+
+#product_movement_tbl tbody td.event {
+	background: #696969;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	/* border-right: 1px solid #fff; */
+}
+
+#product_movement_tbl tbody td.alt {
+	background: #a9a9a9;
+	color: #333;	
+}
+
+#product_movement_tbl tbody td.wkend {
+}
+
+tr.overdue th,
+tr.overdue td,
+#product_movement_tbl tbody td.overdue {
+	background-color:#FCB0B0;
+}
+
+#product_movement_tbl tr,
+#product_movement_header_tbl tr {
+	background: #fefefe url(../images/movement-tracker/cols.gif) top left !important;
+}
+
+#product_details_tbl th.last,
+#product_details_header_tbl th.last {
+	border-right: none;
+}
+
+#product_movement_header_tbl tr#day_headers th,
+#product_movement_tbl tr#day_headers_fake th {
+	font-weight: normal;
+	font-size: 9px;
+	font-family: Verdana;
+	color: #777;
+}
+
+
+#product_movement_tbl_container {
+	left: 452px;
+}
+#product_details_tbl, #product_details_tbl_container {
+	left: 0px;
+	width: 450px;
+}
+
+#product_movement_tbl_container {
+	overflow-y: scroll;	
+}
+
+#product_movement_tbl_container,
+#product_movement_header_tbl {
+	
+}
+
+#product_details_tbl_container {
+	overflow: hidden;
+	z-index: 10;
+}
+
+#product_details_header_tbl,
+#product_details_tbl_container {
+	-webkit-box-shadow: #888 2px 0px 1px;
+	-moz-box-shadow: #888 2px 0px 1px;
+	box-shadow: #888 2px 0px 1px;
+}
+
+#product_movement_header_tbl,
+#product_details_header_tbl {
+	-webkit-box-shadow: #888 0px 2px 1px;
+	-moz-box-shadow: #888 0px 2px 1px;
+	box-shadow: #888 0px 2px 1px;
+	
+}
+
+#product_movement_header_tbl,
+#product_details_header_tbl {
+	position: fixed;
+	top: 70px;
+	overflow:hidden;
+}
+
+#product_details_header_tbl {
+	overflow: hidden;
+}
+
+#product_details_tbl thead th,
+#product_movement_tbl thead th {
+	line-height: 0;
+	visibility: hidden;
+}
+
+span.tdata {
+	display: block;
+	width: auto;
+	height: 1.4em;
+	line-height: 1.4;
+	overflow: hidden;
+	/* border: 1px solid #333; */
+}
+
+td.event ul, td.event h3 {
+	display:none;
+}
+
+
+/* rows for segment separation */
+span.sgm {
+	height: 1.7em;
+	line-height: 1.7;
+}
+
+
+/* =misc */
+#code_col {
+	width: 30px;
+}
+
+
+#pt_load_indicator {
+	position: absolute;
+	top: 200px;
+	text-align: center;
+	width: 100%;
+	color: #888;
+	padding: 10px;
+}
+
+#pt_event_panel {
+	position: absolute;
+	top: 3px;
+	left: 50%;
+	font-size: 13px;
+	width: 400px;
+	background: #888;
+ 	color: #fff;
+	display: none;
+	z-index: 1000;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	margin-left: -200px;
+	line-height: 1;
+}
+
+#pt_event_panel li {
+	padding: 2px 0;
+}
+
+#pt_event_panel_details {
+	margin: 5px 0 0 0;
+}
+
+#pt_event_panel h3 {
+	font-size: 16px;
+}
+
+#pt_event_panel_inner {
+	padding: 0px 20px 5px;
+}
+
+#product_details_tbl_container_inner,
+#product_movement_tbl_container_inner {
+	
+}
+
+.popover .popover-content{
+	font-size:12px;
+	background: #333;
+	color: #fff;
+}
+.popover .popover-title{
+	font-size:12px;
+	background: #555;
+	color: #fff;
+	
+}
+.popover h3{
+	font-size:12px;
+	font-weight: bold;
+}
+
+.popover * {
+
+}
+
+.popover-content ul, .popover-content ul li {
+	list-style-type: none;
+}
+
+td.event:hover {
+	background-color: #222 !important;
+	color: #fff !important;
+}
+
+/* ===================================================================
+	Print styles
+	Inline to save a http request 
+----------------------------------------------------------------------*/
+
+@media print {
+	
+}

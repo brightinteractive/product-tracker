@@ -1,0 +1,18 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>noreply@bright-interactive.co.uk</from>
+       <to>#email#</to>		 
+      </addresses>
+      <subject>
+         Product Movement Reminder
+      </subject>
+      <body>
+Product movement reminder:
+
+#productList#
+      </body>
+   </email-template>
+
+</email-templates>

@@ -1,0 +1,205 @@
+<bright>
+ <component
+    role="MainDataSource"
+    class="com.bn2web.common.database.ResourceLimitingJdbcDataSource">
+         <pool-controller min="10" max="20" max-strict="true" blocking="true" timeout="10000" connection-class="org.apache.avalon.excalibur.datasource.JdbcConnection"/>
+         <auto-commit>false</auto-commit>
+         <driver>org.gjt.mm.mysql.Driver</driver> <!-- Use com.p6spy.engine.spy.P6SpyDriver to log sql statements-->
+         <dburl>jdbc:mysql://localhost:3306/product_tracker</dburl> <!-- Prefix with p6spy: if using spy utility -->
+         <user>dbuser</user>
+         <password>jd_3%dXc</password>
+ </component>
+ <component
+    role="ScheduleManager"
+    class="com.bright.framework.common.service.ScheduleManager">
+ </component>  
+ <component
+    role="EmailManager"
+    class="com.bright.framework.mail.service.EmailManager">
+ </component>  
+ <component
+    role="DBTransactionManager"
+    class="com.bright.framework.database.service.DBTransactionManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+ </component>
+ <component
+    role="UserManager"
+    class="com.bright.framework.user.service.UserManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+  </component>
+ <component
+    role="FileStoreManager"
+    class="com.bright.framework.file.service.FileStoreManager">
+    <property setmethod="setFileStoreRoot" value="/stored-images"/>
+    <property setmethod="setDirectoryCount" value="15"/>
+ </component>
+ <component
+    role="ImageManager"
+    class="com.bright.framework.image.service.ImageManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+   	<linkedcomponent setmethod="setFileStoreManager" value="FileStoreManager"/>
+		<property setmethod="setJpgConversionQuality" value="0.9"/> 
+ </component>
+ <component
+    role="EventManager"
+    class="com.bright.producttracker.event.service.EventManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+ </component>
+ <component
+    role="ListManager"
+    class="com.bright.framework.simplelist.service.ListManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+ </component> 
+ <component
+    role="RefDataManager"
+    class="com.bright.producttracker.application.service.RefDataManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+ </component> 
+ <component
+    role="ProductManager"
+    class="com.bright.producttracker.product.service.ProductManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+   	<linkedcomponent setmethod="setUserManager" value="UserManager"/>
+	<linkedcomponent setmethod="setImageManager" value="ImageManager"/>  	
+   	<linkedcomponent setmethod="setScheduleManager" value="ScheduleManager"/>
+   	<linkedcomponent setmethod="setEmailManager" value="EmailManager"/>
+	<linkedcomponent setmethod="setProductSegmentManager" value="ProductSegmentManager"/>
+ </component>  
+<component
+    role="ProductSegmentManager"
+    class="com.bright.producttracker.productsegment.service.ProductSegmentManager">
+   	<linkedcomponent setmethod="setDataSourceComponent" value="MainDataSource"/>
+ </component>  
+ <component
+    role="MovementTrackerCsvDataFormatter"
+    class="com.bright.producttracker.movementtracker.service.MovementTrackerCsvDataFormatter">   	
+ </component>
+ <component
+    role="MovementTrackerJsonDataFormatter"
+    class="com.bright.producttracker.movementtracker.service.MovementTrackerJsonDataFormatter">   	
+ </component>
+<actionlinks>
+
+	<actionclass type="com.bright.framework.user.action.LoginAction">
+		<linkedcomponent setmethod="setUserManager" value="UserManager"/>
+	</actionclass>
+	<actionclass type="com.bright.framework.user.action.LogoutAction">
+		<linkedcomponent setmethod="setUserManager" value="UserManager"/>
+	</actionclass>	
+	<actionclass type="com.bright.framework.user.action.ChangePasswordAction">
+		<linkedcomponent setmethod="setUserManager" value="UserManager"/>
+	</actionclass>			
+	<actionclass type="com.bright.producttracker.event.action.ViewEventsAction">
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>
+	</actionclass>	
+	<actionclass type="com.bright.producttracker.event.action.ViewEditEventAction">
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>
+	</actionclass>			
+	<actionclass type="com.bright.producttracker.event.action.SaveEventAction">
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>
+	</actionclass>
+	<actionclass type="com.bright.producttracker.event.action.ViewEventAction">
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>				
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.application.action.DeleteEventAction">
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+		<linkedcomponent setmethod="setTransactionManager" value="DBTransactionManager"/>					
+	</actionclass>				
+		
+	<actionclass type="com.bright.framework.simplelist.action.ViewListsAction">
+		<linkedcomponent setmethod="setListManager" value="ListManager"/>
+	</actionclass>		
+	<actionclass type="com.bright.framework.simplelist.action.ViewListValuesAction">
+		<linkedcomponent setmethod="setListManager" value="ListManager"/>
+	</actionclass>		
+	<actionclass type="com.bright.framework.simplelist.action.AddListValue">
+		<linkedcomponent setmethod="setListManager" value="ListManager"/>
+	</actionclass>	
+	<actionclass type="com.bright.producttracker.application.action.DeleteListValue">
+		<linkedcomponent setmethod="setListManager" value="ListManager"/>
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+		<linkedcomponent setmethod="setTransactionManager" value="DBTransactionManager"/>			
+	</actionclass>			
+	
+	<actionclass type="com.bright.producttracker.product.action.ViewProductAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>		
+		<linkedcomponent setmethod="setProductSegmentManager" value="ProductSegmentManager"/>
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.product.action.ViewProductMovementAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>		
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.product.action.SaveProductAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+   		<linkedcomponent setmethod="setImageManager" value="ImageManager"/>	
+		<linkedcomponent setmethod="setProductSegmentManager" value="ProductSegmentManager"/>
+
+		<linkedcomponent setmethod="setTransactionManager" value="DBTransactionManager"/> 		
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.product.action.SaveProductMovementAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+   		<linkedcomponent setmethod="setTransactionManager" value="DBTransactionManager"/> 		
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>		
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.product.action.MoveOnProductAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+   		<linkedcomponent setmethod="setTransactionManager" value="DBTransactionManager"/> 		
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.product.action.DeleteProductMovementAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+   		<linkedcomponent setmethod="setTransactionManager" value="DBTransactionManager"/> 		
+	</actionclass>		
+	<actionclass type="com.bright.producttracker.product.action.SearchAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+	</actionclass>				
+	<actionclass type="com.bright.producttracker.product.action.ViewProductEventsAction">
+		<linkedcomponent setmethod="setEventManager" value="EventManager"/>
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+	</actionclass>			
+	<actionclass type="com.bright.producttracker.product.action.DeleteProductEventAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+	</actionclass>						
+	<actionclass type="com.bright.producttracker.product.action.DeleteProductAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+	</actionclass>
+	<actionclass type="com.bright.producttracker.product.action.GenerateReportAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+		<linkedcomponent setmethod="setFileStoreManager" value="FileStoreManager"/>
+		<linkedcomponent setmethod="setProductSegmentManager" value="ProductSegmentManager"/>
+	</actionclass>
+	<actionclass type="com.bright.producttracker.product.action.SendAdminEmailAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+	</actionclass>
+	<actionclass type="com.bright.producttracker.product.action.SendReminderEmailAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+	</actionclass>
+	<actionclass type="com.bright.producttracker.product.action.SendCoordinatorEmailAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>		
+	</actionclass>
+	<actionclass type="com.bright.producttracker.product.action.ViewSearchAction">
+		<linkedcomponent setmethod="setProductSegmentManager" value="ProductSegmentManager"/>
+	</actionclass>
+
+	<actionclass type="com.bright.producttracker.movementtracker.action.FormatMovementTrackerDataAsCsvAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+		<linkedcomponent setmethod="setMovementTrackerDataFormatter" value="MovementTrackerCsvDataFormatter"/>
+	</actionclass>
+	
+	<actionclass type="com.bright.producttracker.movementtracker.action.FormatMovementTrackerDataAsJsonAction">
+		<linkedcomponent setmethod="setProductManager" value="ProductManager"/>
+		<linkedcomponent setmethod="setMovementTrackerDataFormatter" value="MovementTrackerJsonDataFormatter"/>
+	</actionclass>
+
+	<actionclass type="com.bright.producttracker.movementtracker.action.ViewMovementTrackerAction">
+		<linkedcomponent setmethod="setProductSegmentManager" value="ProductSegmentManager"/>
+	</actionclass>
+
+	
+	
+
+
+ </actionlinks>
+</bright>

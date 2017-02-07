@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+	PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+	"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>RapidSpellWeb</shortname>
+	<uri>http://www.keyoti.com/</uri>
+	<info>This tag library defines the pinSpell Web tags</info>
+
+	<tag>
+		<name>rapidSpellWebLauncher</name>
+		<tagclass>com.keyoti.rapidSpell.web.RapidSpellWebLauncher</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>This tag is used to create the button which opens the spell checker page (containing the RapidSpellWeb tag).</info>
+		<attribute>
+			<name>id</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>rapidSpellWebPage</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>callBack</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>textComponentName</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>suggestionsMethod</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>textComponentInterface</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>separateHyphenWords</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>tabIndex</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>includeUserDictionaryInSuggestions</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>ignoreCapitalizedWords</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>ignoreXML</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>showXMLTags</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>considerationRange</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>mode</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>userDictionaryFile</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>windowWidth</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>windowHeight</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>finishedListener</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>buttonText</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>buttonStyle</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>buttonOnMouseOver</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>buttonOnMouseOut</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>dictFile</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>createPopUpWindow</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>popUpWindowName</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>showFinishedMessage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>showNoErrorsMessage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>guiLanguage</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>languageParser</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+
+	</tag>
+
+	<tag>
+		<name>rapidSpellWeb</name>
+		<tagclass>com.keyoti.rapidSpell.web.RapidSpellWeb</tagclass>
+		<bodycontent>empty</bodycontent>
+		<info>This tag is used to create the actual spell checker.</info>
+
+		<attribute>
+			<name>changeToLabel</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>suggestionsLabel</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeToLabelStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>suggestionsLabelStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>previewPaneStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>previewPaneWidth</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>previewPaneHeight</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>badWordHighlightStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeToBoxStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>suggestionsBoxStyle</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+		<attribute>
+			<name>addButtonStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>addButtonOnMouseOver</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>addButtonOnMouseOut</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>addButtonText</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+		<attribute>
+			<name>ignoreButtonStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreButtonOnMouseOver</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreButtonOnMouseOut</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreButtonText</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+		<attribute>
+			<name>changeButtonStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeButtonOnMouseOver</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeButtonOnMouseOut</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeButtonText</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+
+		<attribute>
+			<name>changeAllButtonStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeAllButtonOnMouseOver</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeAllButtonOnMouseOut</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>changeAllButtonText</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+		<attribute>
+			<name>ignoreAllButtonStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreAllButtonOnMouseOver</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreAllButtonOnMouseOut</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreAllButtonText</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+
+		<attribute>
+			<name>finishButtonStyle</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>finishButtonOnMouseOver</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>finishButtonOnMouseOut</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>finishButtonText</name>
+			<required>false</required>
+		</attribute>
+
+
+
+
+
+
+		<attribute>
+			<name>layout</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+</taglib>

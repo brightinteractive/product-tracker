@@ -1,0 +1,1236 @@
+{
+	
+	"segments" : [
+		{ "code": "cvj_systems", "name": "CVJ Systems", "products": [
+			{
+				"code": "",
+				"name": "countertrack",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "Face Spline",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "Ball Spline",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "TATA Nano",
+				"schedule": [
+				]
+			}
+		]},
+		{ "code": "awd_systems", "name": "AWD Systems", "products": [
+			{
+				"code": "",
+				"name": "DTF Proshaft",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "EMCD",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "AWD Coupling",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "Twinster",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "Disconnects (PTU/RDU)",
+				"schedule": [
+				]
+			}
+		]},
+		{ "code": "trans_axle_solutions", "name": "Trans Axle Solutions", "products": [
+			{
+				"code": "",
+				"name": "Open Differential",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "Downsized open diff & sinter gears",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "ETM",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "ETV",
+				"schedule": [
+				]
+			},
+			{
+				"code": "",
+				"name": "EDL",
+				"schedule": [
+				]
+			}
+		]},
+		{ "code": "edrive_systems", "name": "eDrive Systems", "products": [
+			{ 
+				"code": "E 000",
+				"name": "Electric Motor Assist (M-4WD)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]
+			},
+			{ 
+				"code": "E 100",
+				"name": "eAxle for Hybrid AWD (HY4) - perspect housing",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			},
+			{ 
+				"code": "E 101",
+				"name": "eAxle for Hybrid AWD (HY5)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "NEO Conference"
+					}
+				]				
+				
+			},
+			{ 
+				"code": "E 102",
+				"name": "eAxle for Hybrid AWD (HY6)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "Wintertest Journalist Visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]								
+			},
+			{ 
+				"code": "E 103",
+				"name": "eAxle for Hybrid AWD (no motor)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 200",
+				"name": "eTransmission Family 2 ( no motor, including 2 GI joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "BIR customer visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 201",
+				"name": "eTransmission Family 2 (with engine dummy and 2 joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 300",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 301",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "9/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																				
+			},
+			{ 
+				"code": "E 400",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 401",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "12/03/2012",
+						"event_span": 21,
+						"event_name": "In Production"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 402",
+				"name": "2-speed eDrive System prototype (BMW?)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			}
+		]},
+		{ "code": "edrive_systems2", "name": "eDrive Systems", "products": [
+			{ 
+				"code": "E 000",
+				"name": "Electric Motor Assist (M-4WD)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]
+			},
+			{ 
+				"code": "E 100",
+				"name": "eAxle for Hybrid AWD (HY4) - perspect housing",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			},
+			{ 
+				"code": "E 101",
+				"name": "eAxle for Hybrid AWD (HY5)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "NEO Conference"
+					}
+				]				
+				
+			},
+			{ 
+				"code": "E 102",
+				"name": "eAxle for Hybrid AWD (HY6)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "Wintertest Journalist Visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]								
+			},
+			{ 
+				"code": "E 103",
+				"name": "eAxle for Hybrid AWD (no motor)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 200",
+				"name": "eTransmission Family 2 ( no motor, including 2 GI joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "BIR customer visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 201",
+				"name": "eTransmission Family 2 (with engine dummy and 2 joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 300",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 301",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "9/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																				
+			},
+			{ 
+				"code": "E 400",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 401",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "12/03/2012",
+						"event_span": 21,
+						"event_name": "In Production"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 402",
+				"name": "2-speed eDrive System prototype (BMW?)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			}
+		]},
+		{ "code": "edrive_systems3", "name": "eDrive Systems", "products": [
+			{ 
+				"code": "E 000",
+				"name": "Electric Motor Assist (M-4WD)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]
+			},
+			{ 
+				"code": "E 100",
+				"name": "eAxle for Hybrid AWD (HY4) - perspect housing",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			},
+			{ 
+				"code": "E 101",
+				"name": "eAxle for Hybrid AWD (HY5)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "NEO Conference"
+					}
+				]				
+				
+			},
+			{ 
+				"code": "E 102",
+				"name": "eAxle for Hybrid AWD (HY6)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "Wintertest Journalist Visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]								
+			},
+			{ 
+				"code": "E 103",
+				"name": "eAxle for Hybrid AWD (no motor)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 200",
+				"name": "eTransmission Family 2 ( no motor, including 2 GI joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "BIR customer visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 201",
+				"name": "eTransmission Family 2 (with engine dummy and 2 joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 300",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 301",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "9/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																				
+			},
+			{ 
+				"code": "E 400",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 401",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "12/03/2012",
+						"event_span": 21,
+						"event_name": "In Production"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 402",
+				"name": "2-speed eDrive System prototype (BMW?)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			}
+		]},
+		{ "code": "edrive_systems4", "name": "eDrive Systems", "products": [
+			{ 
+				"code": "E 000",
+				"name": "Electric Motor Assist (M-4WD)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]
+			},
+			{ 
+				"code": "E 100",
+				"name": "eAxle for Hybrid AWD (HY4) - perspect housing",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			},
+			{ 
+				"code": "E 101",
+				"name": "eAxle for Hybrid AWD (HY5)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "NEO Conference"
+					}
+				]				
+				
+			},
+			{ 
+				"code": "E 102",
+				"name": "eAxle for Hybrid AWD (HY6)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "Wintertest Journalist Visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]								
+			},
+			{ 
+				"code": "E 103",
+				"name": "eAxle for Hybrid AWD (no motor)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 200",
+				"name": "eTransmission Family 2 ( no motor, including 2 GI joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "BIR customer visit"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]												
+			},
+			{ 
+				"code": "E 201",
+				"name": "eTransmission Family 2 (with engine dummy and 2 joints)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 300",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 301",
+				"name": "Axial Flux Motor AF-130 (dummy)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "26/03/2012",
+						"event_span": 35,
+						"event_name": "In Production"
+					},
+ 					{ 
+						"arrival_date": "9/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																				
+			},
+			{ 
+				"code": "E 400",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 14,
+						"event_name": "SAE Congress San Diego"
+					},
+					{ 
+						"arrival_date": "12/03/2012",
+						"end_date": "19/03/2012",
+						"event_span": 7,
+						"event_name": "SEO Conference"
+					},
+					{ 
+						"arrival_date": "16/04/2012",
+						"end_date": "30/04/2012",
+						"event_span": 14,
+						"event_name": "AMS Conference"
+					},					
+					{ 
+						"arrival_date": "30/04/2012",
+						"end_date": "21/05/2012",
+						"event_span": 21,
+						"event_name": "EVS 26 - Los Angeles"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 401",
+				"name": "2-speed eDrive System G-VO 130-S2 (rapid prototype)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "12/03/2012",
+						"event_span": 21,
+						"event_name": "In Production"
+					},
+					{ 
+						"arrival_date": "09/04/2012",
+						"end_date": "23/04/2012",
+						"event_span": 14,
+						"event_name": "AP Conference"
+					},					
+					{ 
+						"arrival_date": "14/05/2012",
+						"end_date": "04/06/2012",
+						"event_span": 21,
+						"event_name": "JSAE - Yokohama"
+					}					
+				]																
+			},
+			{ 
+				"code": "E 402",
+				"name": "2-speed eDrive System prototype (BMW?)",
+				"schedule": [
+					{ 
+						"arrival_date": "20/02/2012",
+						"end_date": "27/02/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					},
+					{ 
+						"arrival_date": "27/02/2012",
+						"end_date": "05/03/2012",
+						"event_span": 7,
+						"event_name": "LOHMAR"
+					}
+				]				
+			}
+		]}
+		
+	]
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project basedir="." default="deploy-live" name="product-tracker-deploy">
+
+	<!-- This element could be declared as a DTD extension to stop parsing errors showing in eclipse -->
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
+
+	<property name="source_directory" value="C:/software/Tomcat 6.0/webapps/"/>
+   <property name="target_directory" value="C:/Users/Kev/Desktop/Deploy/product-tracker/"/>
+
+	<property name="app_name" value="product-tracker" />
+	<property name="deployed_app_name_live" value="product-tracker" />
+	<property name="deployed_app_name_test" value="product-tracker" />
+
+	
+
+	<!-- Common fileset -->
+	<fileset id="common.fileset" dir="${source_directory}${app_name}">
+		 <!-- include all files in these dirs-->
+		<include name="*.jsp"/>
+		<include name="*.html"/>
+		<include name="calendar/**"/>		
+		<include name="css/**"/>
+		<include name="images/**"/>
+		<include name="js/**"/>
+		<include name="jsp/**"/>
+		
+		<!-- Pick the requires files/dirs from WEB-INF-->
+		<include name="WEB-INF/lib/**"/>
+		<include name="WEB-INF/classes/**"/>
+		<include name="WEB-INF/manager-config/database/**"/>
+		<include name="WEB-INF/manager-config/email-templates/**"/>
+		<include name="WEB-INF/*.tld"/>
+		<include name="WEB-INF/struts-config.xml"/>
+		<include name="WEB-INF/web.xml"/>
+			
+		 <!-- exclude server dependent files (we will rename and copy the flavoured versions) -->
+		 <!-- exclude all flavoured settinsg too -->
+		<exclude name="WEB-INF/classes/ApplicationSettings.properties" />
+		<exclude name="WEB-INF/classes/ApplicationSettings-*.properties" />
+		
+		 <!-- omit cvs files -->
+		<exclude name="**/cvs*" />
+		<exclude name="**/.cvs*" />
+		<exclude name="**/.#*" />
+		
+		 <!-- omit svn files -->
+		<exclude name="**/.svn*" />		
+		
+		 <!-- omit system files -->
+		<exclude name="**/.*" />
+		
+		 <!-- omit bak files eg created by winmerge -->
+		<exclude name="**/*.bak" />
+	</fileset>
+	
+	
+	<target name="dep-copy-site">
+		<!-- Specify the files and directories to copy -->
+		<copy todir="${target_directory}${deployed_app_name}">
+			<fileset refid="common.fileset"/>			
+		</copy>		
+		<!-- Specify the flavoured files and directories to copy -->
+		<copy file="${source_directory}${app_name}/WEB-INF/classes/ApplicationSettings-${flavour}.properties" tofile="${target_directory}${deployed_app_name}/WEB-INF/classes/ApplicationSettings.properties" />
+		<copy file="${source_directory}${app_name}/WEB-INF/components-${flavour}.xconf" tofile="${target_directory}${deployed_app_name}/WEB-INF/components.xconf" />
+					
+	</target>
+	
+
+	<!-- Create empty directories for deploy  -->	
+	<target name="common-create-empty-dirs">
+		<mkdir dir="${target_directory}${deployed_app_name}" />	
+	</target>
+	
+	
+	<!-- Delete deploy dir  -->	
+	<target name="dep-delete_release">
+		<delete includeEmptyDirs="true">
+			<fileset dir="${target_directory}">
+				<include name="${deployed_app_name}/**"/>
+			</fileset>
+      </delete>		
+	</target>
+	
+	<!-- Zip the deployment  -->	
+	<target name="make-zip" >
+		<zip basedir="${target_directory}" destfile="${target_directory}/${deployed_app_name}.zip" includes="${deployed_app_name}/**/*" />
+	</target>
+	
+	<!-- Deploy target (called after flavour is set)  -->	
+	<target name="deploy">
+	  	<antcall target="dep-delete_release"/>
+		<antcall target="common-create-empty-dirs"/>
+	  	<antcall target="dep-copy-site"/>
+		<antcall target="make-zip"/>
+	</target>
+	
+	<!-- Deploy target  (Test) -->	
+	<target name="deploy-test">
+		<property name="flavour" value="test"/>
+		<property name="deployed_app_name" value="${deployed_app_name_test}" />
+	  	<antcall target="deploy" />
+	</target>
+	
+	<!-- Deploy target  (Live) -->	
+	<target name="deploy-live">
+	  	<property name="flavour" value="live"/>
+		<property name="deployed_app_name" value="${deployed_app_name_live}" />
+		<antcall target="deploy"/>
+	</target>
+
+	
+</project>

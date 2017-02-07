@@ -1,0 +1,21 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>noreply@bright-interactive.co.uk</from>
+       <to>#email#</to>		 
+      </addresses>
+      <subject>
+         GKN Driveline Product Update
+      </subject>
+      <body>
+The following GKN Driveline products are arriving at #eventName# over the next #days# days:
+
+#productList#
+
+Regards
+GKN Driveline Product Tracker
+      </body>
+   </email-template>
+
+</email-templates>

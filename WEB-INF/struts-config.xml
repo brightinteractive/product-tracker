@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>         
+<!DOCTYPE struts-config PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">                   
+
+<struts-config>
+
+	<form-beans> 
+	<!-- ============================= User forms ============================= -->
+
+		<form-bean name="loginForm" type="com.bright.framework.user.form.LoginForm"/>
+		<form-bean name="changePasswordForm" type="com.bright.framework.user.form.ChangePasswordForm"/>	
+		<form-bean name="manageEventsForm" type="com.bright.producttracker.event.form.ManageEventsForm"/>	
+		<form-bean name="eventForm" type="com.bright.producttracker.event.form.EventForm"/>	
+		<form-bean name="listForm" type="com.bright.framework.simplelist.form.ListForm"/>	
+		<form-bean name="listValueForm" type="com.bright.framework.simplelist.form.ListValueForm"/>			
+		<form-bean name="searchProductForm" type="com.bright.producttracker.product.form.SearchForm"/>			
+		<form-bean name="productForm" type="com.bright.producttracker.product.form.ProductForm"/>			
+		<form-bean name="productEventsForm" type="com.bright.producttracker.product.form.ProductEventsForm"/>	
+		<form-bean name="productMovementForm" type="com.bright.producttracker.product.form.ProductMovementForm"/>
+		<form-bean name="reportForm" type="com.bright.producttracker.product.form.ReportForm"/>			
+		<form-bean name="movementTrackerForm" type="com.bright.producttracker.movementtracker.form.MovementTrackerForm"/>
+				
+	</form-beans>
+
+	<global-exceptions>
+		<exception 
+		key="global.error.bn2exception"
+			path="/jsp/error.jsp"
+			scope="request"
+			type="com.bn2web.common.exception.Bn2Exception"/>
+		<exception 
+		key="global.error.ServletException"
+			path="/jsp/error.jsp"
+			scope="request"
+			type="javax.servlet.ServletException"/>
+		<exception 
+		key="global.error.NoPermissionException"
+			path="/action/viewLogin"
+			scope="request"
+			type="com.bright.framework.user.exception.NoPermissionException"/>					
+	</global-exceptions>
+	<global-forwards>
+		<forward name="Failure" path="/jsp/error.jsp" />
+		<forward name="SystemFailure" path="/jsp/error.jsp" />
+		<forward name="NoPermission" path="/action/viewLogin" redirect="true"/>		
+	</global-forwards>
+
+	<action-mappings>
+
+
+
+		<!-- ============================= User actions ============================= -->
+
+		<action
+			path="/viewLogin"
+			type="com.bright.framework.user.action.ViewLoginAction"
+			scope="request"
+			name="loginForm"
+			validate="false">
+			<forward name="Success" path="/jsp/login.jsp"/>
+		</action>
+
+		<action
+			path="/login"
+			type="com.bright.framework.user.action.LoginAction"
+			scope="request"
+			name="loginForm"
+			validate="false">
+			<forward name="Success" path="/action/viewHome" redirect="true"/>
+			<forward name="Failure" path="/jsp/login.jsp"/>			 
+		</action>
+
+		<action
+			path="/logout"
+			type="com.bright.framework.user.action.LogoutAction"
+			scope="request"
+			name="loginForm"
+			validate="false">
+			<forward name="Success" path="/action/viewLogin"/>
+		</action>
+		
+		<action
+			path="/viewChangePassword"
+			type="com.bright.framework.user.action.ViewChangePasswordAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/jsp/edit_settings.jsp"/>
+		</action>		
+		
+		<action
+			path="/changePassword"
+			type="com.bright.framework.user.action.ChangePasswordAction"
+			scope="request"
+			name="changePasswordForm"
+			validate="false">
+			<forward name="Success" path="/action/viewHome"/>
+			<forward name="Failure" path="/jsp/edit_settings.jsp"/>
+			<forward name="Cancel" path="/action/viewHome"/>
+		</action>		
+
+		<action
+			path="/viewHome"
+			type="com.bright.producttracker.application.action.ViewHomeAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewSearchProduct"/>
+		</action>
+				
+		<action
+			path="/viewEvents"
+			type="com.bright.producttracker.event.action.ViewEventsAction"
+			scope="request"
+			name="manageEventsForm"
+			validate="false">
+			<forward name="Success" path="/jsp/events.jsp"/>
+		</action>
+		
+		<action
+			path="/viewEditEvent"
+			type="com.bright.producttracker.event.action.ViewEventAction"
+			scope="request"
+			name="eventForm"
+			validate="false">
+			<forward name="Success" path="/jsp/edit_event.jsp"/>
+		</action>	
+		
+		<action
+			path="/saveEvent"
+			type="com.bright.producttracker.event.action.SaveEventAction"
+			scope="request"
+			name="eventForm"
+			validate="false">
+			<forward name="Success" path="/action/viewEvent"/>			
+			<forward name="Failure" path="/jsp/edit_event.jsp"/>
+			<forward name="Cancel" path="/action/viewEvent"/>	
+			<forward name="AddCancel" path="/action/viewEvents" redirect="true"/>
+		</action>			
+		
+		<action
+			path="/viewEvent"
+			type="com.bright.producttracker.event.action.ViewEventAction"
+			scope="request"
+			name="eventForm"
+			validate="false">
+			<forward name="Success" path="/jsp/view_event.jsp"/>
+		</action>		
+		
+		<action
+			path="/deleteEvent"
+			type="com.bright.producttracker.application.action.DeleteEventAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewEvents" redirect="true"/>
+		</action>		
+		
+		<action
+			path="/viewManageLists"
+			type="com.bright.framework.simplelist.action.ViewListsAction"
+			scope="request"
+			name="listForm"
+			validate="false">
+			<forward name="Success" path="/jsp/lists.jsp"/>
+		</action>		
+		
+		<action
+			path="/viewManageListValues"
+			type="com.bright.framework.simplelist.action.ViewListValuesAction"
+			scope="request"
+			name="listForm"
+			validate="false">
+			<forward name="Success" path="/jsp/edit_list.jsp"/>
+		</action>		
+		
+		<action
+			path="/addListValue"
+			type="com.bright.framework.simplelist.action.AddListValue"
+			scope="request"
+			name="listValueForm"
+			validate="false">
+			<forward name="Success" path="/action/viewManageListValues"/>
+			<forward name="Failure" path="/action/viewManageListValues"/>			
+		</action>	
+		
+		<action
+			path="/deleteListValue"
+			type="com.bright.producttracker.application.action.DeleteListValue"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewManageListValues"/>
+			<forward name="Failure" path="/action/viewManageListValues"/>			
+		</action>					
+		
+		<action
+			path="/viewSearchProduct"
+			type="com.bright.producttracker.product.action.ViewSearchAction"
+			scope="request"
+			name="searchProductForm"
+			validate="false">
+			<forward name="Success" path="/jsp/home.jsp"/>
+		</action>	
+		
+		<action
+			path="/searchProduct"
+			type="com.bright.producttracker.product.action.SearchAction"
+			scope="request"
+			name="searchProductForm"
+			validate="false">
+			<forward name="Success" path="/jsp/search_results.jsp"/>
+			<forward name="NoSavedSearch" path="/jsp/no_saved_search.jsp"/>
+		</action>				
+		
+		<action
+			path="/viewEditProduct"
+			type="com.bright.producttracker.product.action.ViewProductAction"
+			scope="request"
+			name="productForm"
+			validate="false">
+			<forward name="Success" path="/jsp/edit_product.jsp"/>
+		</action>		
+		
+		<action
+			path="/saveProduct"
+			type="com.bright.producttracker.product.action.SaveProductAction"
+			scope="request"
+			name="productForm"
+			validate="false">
+			<forward name="Success" path="/action/viewProduct"/>			
+			<forward name="Failure" path="/jsp/edit_product.jsp"/>
+			<forward name="AddCancel" path="/action/searchProduct?searchCriteria.all=true" redirect="true"/>			
+			<forward name="Cancel" path="/action/viewProduct"/>			
+		</action>	
+			
+		<action
+			path="/viewProduct"
+			type="com.bright.producttracker.product.action.ViewProductAction"
+			scope="request"
+			name="productForm"
+			validate="false">
+			<forward name="Success" path="/jsp/view_product.jsp"/>
+		</action>	
+		
+		<action
+			path="/viewProductLabel"
+			type="com.bright.producttracker.product.action.ViewProductAction"
+			scope="request"
+			name="productForm"
+			validate="false">
+			<forward name="Success" path="/jsp/product_label.jsp"/>
+		</action>		
+		
+		<action
+			path="/viewEditProductEvents"
+			type="com.bright.producttracker.product.action.ViewProductEventsAction"
+			scope="request"
+			name="productEventsForm"
+			validate="false">
+			<forward name="Success" path="/jsp/edit_product_events.jsp"/>
+		</action>	
+		
+		<action
+			path="/deleteProductEvent"
+			type="com.bright.producttracker.product.action.DeleteProductEventAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewEditProductEvents"/>
+		</action>
+		
+		<action
+			path="/deleteProduct"
+			type="com.bright.producttracker.product.action.DeleteProductAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/searchProduct?back=true" redirect="true"/>
+		</action>			
+		
+		<action
+			path="/viewEditProductMovement"
+			type="com.bright.producttracker.product.action.ViewProductMovementAction"
+			scope="request"
+			name="productMovementForm"
+			validate="false">
+			<forward name="Success" path="/jsp/edit_product_movement.jsp"/>
+		</action>		
+		
+		<action
+			path="/saveProductMovement"
+			type="com.bright.producttracker.product.action.SaveProductMovementAction"
+			scope="request"
+			name="productMovementForm"
+			validate="false">
+			<forward name="Success" path="/action/viewProduct"/>			
+			<forward name="Failure" path="/jsp/edit_product_movement.jsp"/>
+			<forward name="Cancel" path="/action/viewHome"/>			
+		</action>	
+
+		<action
+			path="/moveOnProduct"
+			type="com.bright.producttracker.product.action.MoveOnProductAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewProduct"/>			
+		</action>	
+
+		<action
+			path="/deleteProductMovement"
+			type="com.bright.producttracker.product.action.DeleteProductMovementAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewProduct"/>			
+		</action>	
+		
+		<action
+			path="/viewGenerateReport"
+			type="com.bright.producttracker.product.action.ViewGenerateReportAction"
+			scope="request"
+			name="reportForm"
+			validate="false">
+			<forward name="Success" path="/jsp/report_generate.jsp"/>
+		</action>
+
+		<action
+			path="/sendAdminEmail"
+			type="com.bright.producttracker.product.action.SendAdminEmailAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewHome" redirect="true"/>
+		</action>
+		
+		<action
+			path="/sendReminderEmail"
+			type="com.bright.producttracker.product.action.SendReminderEmailAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewHome" redirect="true"/>
+		</action>
+		
+		<action
+			path="/sendCoordinatorEmail"
+			type="com.bright.producttracker.product.action.SendCoordinatorEmailAction"
+			scope="request"
+			validate="false">
+			<forward name="Success" path="/action/viewHome" redirect="true"/>
+		</action>
+
+		<action
+			path="/generateReport"
+			type="com.bright.producttracker.product.action.GenerateReportAction"
+			scope="request"
+			name="reportForm"
+			validate="false">
+			<forward name="Success" path="/jsp/report.jsp"/>
+			<forward name="Download" path="/servlet/download"/>
+			<forward name="Failure" path="/jsp/report_generate.jsp"/>
+		</action>
+		
+		<action
+			path="/viewMovementTracker"
+			type="com.bright.producttracker.movementtracker.action.ViewMovementTrackerAction"
+			scope="request"
+			name="movementTrackerForm"
+			validate="false">
+			<forward name="Success" path="/jsp/movement_tracker.jsp"/>			
+		</action>
+		
+		<action
+			path="/formatMovementTrackerAsJson"
+			type="com.bright.producttracker.movementtracker.action.FormatMovementTrackerDataAsJsonAction"
+			scope="request"
+			name="movementTrackerForm"
+			validate="false">			
+		</action>
+		
+		<action
+			path="/formatMovementTrackerAsCsv"
+			type="com.bright.producttracker.movementtracker.action.FormatMovementTrackerDataAsCsvAction"
+			scope="request"
+			name="movementTrackerForm"
+			validate="false">			
+		</action>
+
+	</action-mappings>
+ 
+<controller 
+	contentType="text/html;charset=UTF-8"
+	debug="0"
+	locale="true"
+	nocache="true"
+	processorClass="com.bright.producttracker.application.service.PTRequestProcessor"/> 
+
+  <message-resources parameter="ApplicationMessageResources" null="false"/>
+
+</struts-config>

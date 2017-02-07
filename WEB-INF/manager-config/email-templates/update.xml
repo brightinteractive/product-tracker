@@ -1,0 +1,28 @@
+<email-templates>
+
+   <email-template>
+      <addresses>
+		 <from>noreply@bright-interactive.co.uk</from>
+         <to>jonathan.pfeifer@gkndriveline.com</to>          
+      </addresses>
+      <subject>
+         Product Movement Update
+      </subject>
+      <body>
+Product movements reminder:
+
+***OVERDUE***:
+
+#overdue#
+
+Arrivals:
+
+#arrivals#
+
+Departures:
+
+#departures#
+      </body>
+   </email-template>
+
+</email-templates>
