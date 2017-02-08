@@ -17,25 +17,23 @@ d2	11-Jan-2008				Matt Stevenson			Added code for basic signon without login
 --------------------------------------------------------------------------------
  */
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Vector;
-
-import javax.servlet.http.HttpSession;
-
-import com.bright.framework.password.PasswordHasher;
-import org.apache.avalon.excalibur.datasource.DataSourceComponent;
-
 import com.bn2web.common.exception.Bn2Exception;
 import com.bn2web.common.service.Bn2Manager;
 import com.bright.framework.constant.FrameworkSettings;
+import com.bright.framework.password.PasswordHasher;
 import com.bright.framework.user.bean.User;
 import com.bright.framework.user.bean.UserProfile;
 import com.bright.framework.user.constant.UserConstants;
 import com.bright.framework.user.exception.AccountSuspendedException;
 import com.bright.framework.user.exception.InvalidLoginException;
+import org.apache.avalon.excalibur.datasource.DataSourceComponent;
+
+import javax.servlet.http.HttpSession;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Vector;
 
 /**
  *
@@ -588,38 +586,26 @@ public class UserManager extends Bn2Manager implements UserConstants
 
 	}
 
-	 /*
-	  * Returns true if the two passwords (a_sPassword1 and a_sPassword2) are equal.
-	  *
-	  *@param String a_sPassword1 - the first password.
-	  *@param String a_sPassword2 - the second password.
-	  *@return boolean.
-	  */
-	protected boolean passwordsAreEqual (String a_sUnEncryptedPassword, String a_sEncryptedPassword)
-	 /*
-	 ------------------------------------------------------------------------
-	  d4   21-Oct-2003  Martin Wilson           Added.
-	 ------------------------------------------------------------------------
-	  */
+
+
+	protected boolean passwordsAreEqual (String providedPassword, String storedPassword)
 	{
-
-		// Cope with nulls:
-		if ( (a_sUnEncryptedPassword == null) && (a_sEncryptedPassword == null))
+		if ((providedPassword == null) && (storedPassword == null))
 		{
-			return (true);
+			return true;
 		}
 
-		if (a_sEncryptedPassword == null)
+		if (storedPassword == null || providedPassword == null)
 		{
-			return (false);
+			return false;
 		}
 
-		if (a_sUnEncryptedPassword == null)
+		if (providedPassword.equals(FrameworkSettings.getDefaultPassword()) && providedPassword.equals(storedPassword))
 		{
-			return (false);
+			return true;
 		}
 
-		return passwordHasher.checkPassword(a_sEncryptedPassword, a_sUnEncryptedPassword);
+		return passwordHasher.checkPassword(storedPassword, providedPassword);
 	}
 
 	public void setDataSourceComponent (DataSourceComponent a_datasource)
